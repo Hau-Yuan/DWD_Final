@@ -1,0 +1,25 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "final",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hau-Yuan/DWD-Week2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hau-Yuan/DWD-Week2/issues"
+  },
+  "homepage": "https://github.com/Hau-Yuan/DWD-Week2#readme",
+  "dependencies": {
+    "express": "4.16.2",
+    "websocket": "1.0.25",
+    "ws": "4.0.0"
+  }
+}

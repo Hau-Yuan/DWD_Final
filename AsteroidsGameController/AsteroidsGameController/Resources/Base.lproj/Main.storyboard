@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AsteroidsGameController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Player Id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abH-TG-gQi">
+                                <rect key="frame" x="60" y="16" width="692" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.87843137250000003" green="0.2274509804" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DirectionalControl.png" translatesAutoresizingMaskIntoConstraints="NO" id="qJW-Ib-SBJ">
+                                <rect key="frame" x="137" y="108" width="238" height="219"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="862-ee-0LP"/>
+                                    <constraint firstAttribute="width" constant="238" id="asf-c0-wkj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FireBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-nl-WCn">
+                                <rect key="frame" x="474" y="129" width="164" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="j8q-ne-nBC"/>
+                                    <constraint firstAttribute="width" constant="164" id="kWN-8T-DT2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-gy-Z6I" userLabel="right">
+                                <rect key="frame" x="319.66666666666669" y="138" width="49" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Khg-Mf-Pzf"/>
+                                    <constraint firstAttribute="height" constant="155" id="jIE-S2-reb"/>
+                                </constraints>
+                                <state key="normal" image="ClockwiseButton.png"/>
+                                <connections>
+                                    <action selector="rightTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="E60-nD-dWN"/>
+                                    <action selector="rightTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXH-Oj-ZEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd4-eP-HKN" userLabel="left">
+                                <rect key="frame" x="143.66666666666666" y="138" width="49" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Xp2-Mo-fQO"/>
+                                    <constraint firstAttribute="height" constant="155" id="b42-Fc-TPY"/>
+                                </constraints>
+                                <state key="normal" image="CounterclockwiseButton.png"/>
+                                <connections>
+                                    <action selector="leftTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="6ka-9m-b1D"/>
+                                    <action selector="leftTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYV-vV-5Um"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFH-Tc-TUg" userLabel="up">
+                                <rect key="frame" x="205.66666666666663" y="152" width="101" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="OFq-Dy-vDR"/>
+                                    <constraint firstAttribute="width" constant="101" id="bE7-fi-SFd"/>
+                                </constraints>
+                                <state key="normal" image="BoostButton.png"/>
+                                <connections>
+                                    <action selector="UpTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Jl5-LY-sJW"/>
+                                    <action selector="upTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RB7-Hy-UF6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-OY-nca" userLabel="ButtonA">
+                                <rect key="frame" x="495" y="136.66666666666666" width="122" height="121.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="XEh-Y5-q5d"/>
+                                    <constraint firstAttribute="width" constant="122" id="fbC-Pd-Orn"/>
+                                </constraints>
+                                <state key="normal" image="FireButton.png"/>
+                                <connections>
+                                    <action selector="fireLaser:" destination="BYZ-38-t0r" eventType="touchDown" id="2fM-jG-OZU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.18823529411764706" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qJW-Ib-SBJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-150" id="223-o0-KR9"/>
+                            <constraint firstItem="qJW-Ib-SBJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="5qi-y5-lDt"/>
+                            <constraint firstItem="abH-TG-gQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9nT-dI-Jlb"/>
+                            <constraint firstItem="WHS-nl-WCn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="K7F-vh-eqA"/>
+                            <constraint firstItem="pd4-eP-HKN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="28" id="LTX-RQ-mOI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="abH-TG-gQi" secondAttribute="trailing" constant="16" id="M53-ab-mei"/>
+                            <constraint firstItem="ADv-gy-Z6I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-62" id="NPp-Aw-imQ"/>
+                            <constraint firstItem="kFH-Tc-TUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-150" id="NXW-sW-c4p"/>
+                            <constraint firstItem="pd4-eP-HKN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-238" id="R3Z-fl-LJZ"/>
+                            <constraint firstItem="WHS-nl-WCn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="150" id="aO5-tc-VnI"/>
+                            <constraint firstItem="pEy-OY-nca" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="bCl-Mc-B0Z"/>
+                            <constraint firstItem="ADv-gy-Z6I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="28" id="jDc-RN-JlX"/>
+                            <constraint firstItem="pEy-OY-nca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="150" id="jZp-ZC-orN"/>
+                            <constraint firstItem="abH-TG-gQi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="xS2-1y-MQC"/>
+                            <constraint firstItem="kFH-Tc-TUg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="zQk-6c-Kis"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerIdTextField" destination="abH-TG-gQi" id="lmJ-G8-azj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.28185907046478" y="103.2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BoostButton.png" width="310" height="310"/>
+        <image name="ClockwiseButton.png" width="138" height="469"/>
+        <image name="CounterclockwiseButton.png" width="138" height="469"/>
+        <image name="DirectionalControl.png" width="730" height="537"/>
+        <image name="FireBackground.png" width="438" height="438"/>
+        <image name="FireButton.png" width="388" height="388"/>
+    </resources>
+</document>
